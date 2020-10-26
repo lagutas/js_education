@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        console.log("Сложили 1 и 2: " + mathOperation(1,2,"addition"));
+        console.log("Вычли из 10  2: " + mathOperation(10,2,"substraction"));
+        console.log("Поделили 10 на 5: " + mathOperation(10,5,"devision"));
+        console.log("Умножили 4 на 3: " + mathOperation(4,3,"multiplication"));
+        console.log("тупанули 4 на 3: " + mathOperation(4,3,"oldh"));
+        
+        /**
+        * функция выполняет сложение
+        * @param {number} a - число 1
+        * @param {number} b - число 2
+        * @return {number}  результат операции сложения
+        */
+        function makeAddition(a, b) {
+            return (a + b);
+        }
+        
+        /**
+        * функция выполняет вычитание
+        * @param {number} a - число 1
+        * @param {number} b - число 2
+        * @return {number}  результат операции вычитания
+        */
+        function makeSubtraction(a, b) {
+            return (a - b);
+        }
+        
+        /**
+        * функция выполняет деление
+        * @param {number} a - число 1
+        * @param {number} b - число 2
+        * @return {number}  результат операции деления
+        */
+        function makeDevision(a, b) {
+            return (a / b);
+        }
+        
+        /**
+        * функция выполняет умножение
+        * @param {number} a - число 1
+        * @param {number} b - число 2
+        * @return {number}  результат операции умножения
+        */
+        function makeMultiplication(a, b) {
+            return (a * b);
+        }
+        
+        /**
+        * Функция делает ту или иную мат операцию
+        * @param {number} arg1 операнд 1
+        * @param {number} arg2 операнд 2
+        * @param {string} operation операция (addition|substraction|multiplication|devision)
+        * @return {number|string} или результат оперции или ошибка
+        */
+        function mathOperation(arg1, arg2, operation) {
+            
+            let result
+            switch(operation){
+                case "addition":
+                    result = makeAddition(arg1, arg2)
+                    break;
+                case "substraction":
+                    result = makeSubtraction(arg1, arg2)
+                    break;
+                case "devision":
+                    result = makeDevision(arg1, arg2)
+                    break;
+                case "multiplication":
+                    result = makeMultiplication(arg1, arg2)
+                    break;
+                default:
+                    result = "операция не определена";
+                    break;
+            }
+            
+            return result;
+        }
+    </script>    
+</body>
+</html>
