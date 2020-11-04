@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        console.log("Сложили 1 и 2: " + makeAddition(1,2));
+        console.log("Вычли из 10  2: " + makeSubtraction(10,2));
+        console.log("Поделили 10 на 5: " + makeDevision(10,5));
+        console.log("Умножили 4 на 3: " + makeMultiplication(4,3));
+        
+        /**
+        * функция выполняет сложение
+        * @param {number} a - число 1
+        * @param {number} b - число 2
+        * @return {number}  результат операции сложения
+        */
+        function makeAddition(a, b) {
+            return (a + b);
+        }
+        
+        /**
+        * функция выполняет вычитание
+        * @param {number} a - число 1
+        * @param {number} b - число 2
+        * @return {number}  результат операции вычитания
+        */
+        function makeSubtraction(a, b) {
+            return (a - b);
+        }
+        
+        /**
+        * функция выполняет деление
+        * @param {number} a - число 1
+        * @param {number} b - число 2
+        * @return {number}  результат операции деления
+        */
+        function makeDevision(a, b) {
+            return (a / b);
+        }
+        
+        /**
+        * функция выполняет умножение
+        * @param {number} a - число 1
+        * @param {number} b - число 2
+        * @return {number}  результат операции умножения
+        */
+        function makeMultiplication(a, b) {
+            return (a * b);
+        }
+    </script>
+</body>
+</html>
