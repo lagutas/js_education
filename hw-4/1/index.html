@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        let obj = digitToObject(945);
+        console.log(obj);
+        
+        function digitToObject(digit) {
+            
+            if (! Number.isInteger(digit)) {
+                digit = Math.floor(digit);
+            }
+            
+            let numOfHundreds = Math.floor(digit/100); 
+                
+            let numOfTens = Math.floor((digit - numOfHundreds * 100) / 10);
+                
+            let numOfUnits = digit - numOfHundreds * 100 - numOfTens * 10;
+            
+            
+            let obj = {
+                numOfHundreds: numOfHundreds,
+                numOfTens: numOfTens,
+                numOfUnits: numOfUnits
+            };
+            
+            
+            return obj;
+            
+        }
+    </script>
+</body>
+</html>
